@@ -26,29 +26,28 @@ Autor / Mantenedor: yRodAlex
 
 O *AssistenteAI* é um projeto que propõe um agente inteligente de suporte para responder perguntas, auxiliar em análise de dados ou interagir com o usuário de forma dinâmica — parte de um estudo de caso para o curso de Data Science.  
 
-O projeto demonstra como integrar componentes de NLP / LLM, lógica de back-end em Python e interação com o usuário.
+O projeto utiliza **Python**, **Streamlit** e a **API do Groq** para criar uma interface web interativa que permite conversar com o modelo de linguagem.
 
 ---
 
 ## Funcionalidades
 
-- Receber perguntas ou comandos do usuário  
-- Processar a entrada de texto e decidir qual ação executar  
-- Integrar modelos de linguagem para gerar respostas  
-- Permitir extensões ou novos módulos de funcionalidades futuras  
+- Interface web simples via **Streamlit**  
+- Integração com a API do **Groq**  
+- Receber perguntas e comandos do usuário  
+- Processamento de linguagem natural para gerar respostas  
+- Estrutura flexível para novas funcionalidades  
 
 ---
 
 ## Arquitetura / Estrutura do Projeto
-
-A seguir a estrutura de arquivos e pastas (exemplo):
 ├── README.md
 ├── requirements.txt
 ├── dsa_assistente.py
-└── recursos_adicionais / (se houver)
+└── recursos_adicionais/ (se houver)
 
 
-- `dsa_assistente.py` — módulo principal onde reside a lógica do assistente  
+- `dsa_assistente.py` — script principal com a lógica do assistente  
 - `requirements.txt` — dependências do projeto  
 - (Opcional) imagens, dados de exemplo, scripts auxiliares  
 
@@ -57,9 +56,13 @@ A seguir a estrutura de arquivos e pastas (exemplo):
 ## Requisitos
 
 - Python 3.8 ou superior  
-- Bibliotecas listadas em `requirements.txt`
+- Dependências listadas em `requirements.txt`  
 
-Para conferir as dependências, abra o `requirements.txt`.  
+Principais bibliotecas:  
+- `streamlit`  
+- `groq`  
+- `pandas` (se manipular dados)  
+- `numpy` (se realizar cálculos numéricos)  
 
 ---
 
@@ -71,8 +74,20 @@ Para conferir as dependências, abra o `requirements.txt`.
    git clone https://github.com/yRodAlex/AssistenteAI.git
    cd AssistenteAI
 
-pip install -r requirements.txt
+---
 
-Aqui vai um exemplo de como executar o assistente:
-python dsa_assistente.py
+Crie e ative um ambiente virtual:
+Linux 
 
+python3 -m venv .venv
+source .venv/bin/activate
+
+---
+
+Configuração / Parâmetros:
+export GROQ_API_KEY="sua_chave_aqui"
+
+---
+
+Uso / Exemplos
+streamlit run dsa_assistente.py
